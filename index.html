@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <!-- icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <title>Frontend Mentor | 3-column preview card component</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+      *,
+      html {
+        padding: 0;
+        margin: 0;
+      }
+
+      :root {
+        --orange: hsl(31, 77%, 52%);
+        --dcyan: hsl(184, 100%, 22%);
+        --dgreen: hsl(179, 100%, 13%);
+        --text-color: hsla(0, 0%, 100%, 0.75);
+        --bgcolor: hsl(0, 0%, 95%);
+        --size-regular: 0.95rem;
+        --size-l: 2rem;
+        --padding-sl: 0.75rem;
+        --spacing-regular: 1rem;
+        --spacing-l: 2rem;
+      }
+
+      .icon,
+      h1,
+      p {
+        padding: var(--spacing-regular);
+      }
+
+      main {
+        background: var(--bgcolor);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        min-height: 98vh;
+      }
+
+      .card {
+        width: 20rem;
+      }
+
+      .card-1 {
+        background-color: var(--orange);
+        border-top-left-radius: var(--size-regular);
+        border-bottom-left-radius: var(--size-regular);
+      }
+
+      .card-2 {
+        background-color: var(--dcyan);
+      }
+
+      .card-3 {
+        background-color: var(--dgreen);
+        border-top-right-radius: var(--size-regular);
+        border-bottom-right-radius: var(--size-regular);
+      }
+
+      .body {
+        display: flex;
+        flex-direction: column;
+        margin: var(--spacing-l);
+      }
+
+      .body h1 {
+        font-family: "Big Shoulders Display", cursive;
+        font-size: var(--size-l);
+        color: var(--bgcolor);
+        text-transform: uppercase;
+      }
+
+      .body p {
+        font-family: "Lexend Deca", sans-serif;
+        font-size: var(--size-regular);
+        color: var(--text-color);
+        opacity: 75%;
+      }
+
+      .body a {
+        font-family: "Lexend Deca", sans-serif;
+        padding: var(--padding-sl);
+        border-radius: var(--size-l);
+        width: 50%;
+        text-align: center;
+        text-decoration: none;
+        margin-top: 4rem;
+        margin-left: var(--spacing-regular);
+        margin-bottom: var(--spacing-regular);
+        background-color: var(--bgcolor);
+      }
+      .body a:hover {
+        background: none;
+        outline: 2px solid var(--bgcolor);
+      }
+
+      .btn-1 {
+        color: var(--orange);
+      }
+      .btn-1:hover {
+        color: var(--text-color);
+      }
+
+      .btn-2 {
+        color: var(--dcyan);
+      }
+      .btn-2:hover {
+        color: var(--text-color);
+      }
+
+      .btn-3 {
+        color: var(--dgreen);
+      }
+      .btn-3:hover {
+        color: var(--text-color);
+      }
+
+      @media (max-width: 429px) {
+        .card-1 {
+          border-radius: var(--size-regular) var(--size-regular) 0px 0px;
+        }
+        .card-3 {
+          border-radius: 0px 0px var(--size-regular) var(--size-regular);
+        }
+        .body a {
+          width: 45%;
+          margin-top: var(--padding-sl);
+        }
+      }
+
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="card card-1">
+        <div class="body">
+          <div class="icon">
+            <img src="images/icon-sedans.svg" alt="" />
+          </div>
+          <h1>Sedans</h1>
+          <p>
+            Choose a sedan for its affordability and excellent fuel economy.
+            Ideal for cruising in the city or on your next road trip.
+          </p>
+          <a href="" class="btn-1"> Learn More </a>
+        </div>
+      </section>
+
+      <section class="card card-2">
+        <div class="body">
+          <div class="icon">
+            <img src="images/icon-suvs.svg" alt="" />
+          </div>
+          <h1>SUVs</h1>
+          <p>
+            Take an SUV for its spacious interior, power, and versatility.
+            Perfect for your next family vacation and off-road adventures.
+          </p>
+          <a href="" class="btn-2"> Learn More </a>
+        </div>
+      </section>
+
+      <section class="card card-3">
+        <div class="body">
+          <div class="icon">
+            <img src="images/icon-luxury.svg" alt="" />
+          </div>
+          <h1>Luxury</h1>
+          <p>
+            Cruise in the best car brands without the bloated prices. Enjoy the
+            enhanced comfort of a luxury rental and arrive in style.
+          </p>
+          <a href="" class="btn-3"> Learn More </a>
+        </div>
+      </section>
+    </main>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
+</html>
